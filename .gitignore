@@ -1,0 +1,4 @@
+
+node_modules/
+jarvis.db
+.env

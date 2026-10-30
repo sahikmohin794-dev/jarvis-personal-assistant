@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JARVIS AI Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-icon">J</span>
+        <div><h1>J.A.R.V.I.S.</h1><p>PERSONAL ASSISTANT SYSTEM</p></div>
+      </div>
+      <div class="status"><span class="dot"></span> SYSTEM ONLINE</div>
+    </header>
+
+    <main class="dashboard">
+      <section class="hero panel">
+        <div class="eyebrow">STARK INDUSTRIES // INTERFACE 01</div>
+        <h2>Good to see you, <span>Sir.</span></h2>
+        <p class="subtitle">Your personal assistant is ready.</p>
+
+        <div class="clock-area">
+          <div id="clock">00:00:00</div>
+          <div id="date">Loading date...</div>
+        </div>
+
+        <div class="reactor">
+          <div class="reactor-ring ring-one"></div>
+          <div class="reactor-ring ring-two"></div>
+          <div class="reactor-ring ring-three"></div>
+          <div class="reactor-core">J</div>
+        </div>
+
+        <div class="system-message" id="systemMessage">Awaiting your command...</div>
+      </section>
+
+      <section class="panel command-panel">
+        <div class="section-heading">
+          <div><span class="eyebrow">VOICE & TEXT</span><h2>Command Center</h2></div>
+          <span class="tiny-status">READY</span>
+        </div>
+
+        <form id="commandForm">
+          <label for="commandInput">ENTER YOUR COMMAND</label>
+          <div class="command-input">
+            <input id="commandInput" type="text" placeholder="Try: open YouTube" autocomplete="off">
+            <button type="submit" aria-label="Send command">➜</button>
+          </div>
+        </form>
+
+        <button id="voiceButton" class="voice-button" type="button">
+          <span>🎙</span> ACTIVATE VOICE
+        </button>
+
+        <div class="quick-title">QUICK COMMANDS</div>
+        <div class="quick-grid">
+          <button class="quick-command" data-command="what time is it">◷ <span>Time</span></button>
+          <button class="quick-command" data-command="open YouTube">▶ <span>YouTube</span></button>
+          <button class="quick-command" data-command="open Google">⌕ <span>Google</span></button>
+          <button class="quick-command" data-command="help">✧ <span>Help</span></button>
+        </div>
+      </section>
+
+      <section class="panel notes-panel">
+        <div class="section-heading">
+          <div><span class="eyebrow">LOCAL DATABASE</span><h2>Memory Notes</h2></div>
+          <span class="note-count" id="noteCount">0 NOTES</span>
+        </div>
+        <form id="noteForm" class="note-form">
+          <input id="noteInput" type="text" placeholder="Remember something..." maxlength="500" required>
+          <button type="submit">SAVE</button>
+        </form>
+        <div id="notesList" class="notes-list">
+          <p class="muted">Loading notes...</p>
+        </div>
+      </section>
+
+      <section class="panel history-panel">
+        <div class="section-heading">
+          <div><span class="eyebrow">RECENT ACTIVITY</span><h2>Command Log</h2></div>
+        </div>
+        <div id="historyList" class="history-list">
+          <p class="muted">Loading history...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>JARVIS PERSONAL ASSISTANT <span>•</span> BUILT WITH NODE.JS</footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
